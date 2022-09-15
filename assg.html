@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function display(){
+            var msg="";
+            var name = document.getElementById("t1").value;
+            var gender = document.getElementsByName("gender");
+            if (gender[0].checked){
+                msg = `Hello Mr. ${name}`;
+            }
+            else if (gender[1].checked){
+                msg = `Hello Miss. ${name}`;
+            }
+            var span1 = document.getElementById("span1");
+            span1.innerHTML = msg;
+        }
+    </script>
+    <title>Graded Project-Gaurav Patel</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <table>
+        <tr>
+            <td><label for="t1">Enter Name: </label></td>
+            <td><input type="text" name="" id="t1"></td>
+        </tr>
+        <tr>
+            <td><label >Choose Gender</label></td>
+            <td>
+                <input type="radio" name="gender" id="m" value="m">
+                <label for="m">Male</label>
+                <input type="radio" name="gender" id="f" value="f">
+                <label for="f">Female</label>
+
+            </td>            
+        </tr>
+        <tr>
+            <td><input type="button" value="submit" onclick="display()"/></td>
+            <td><span id="span1"></span></td>
+        </tr>
+    </table>
+</body>
+</html>
